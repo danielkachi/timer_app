@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:timer_app/screens/timer_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,7 +48,13 @@ class StartTimer extends StatelessWidget {
                 const Size(270, 50),
               ),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const TimerScreen(),
+                  ));
+            },
             child: const Text(
               "Start Timer",
               style: TextStyle(
